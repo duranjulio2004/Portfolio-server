@@ -7,6 +7,7 @@ const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 const app = express();
+app.use(express.json());
 // Defines which frontend origins can access the server
 const corsOptions = {
     origin: ["https://duranjulio2004.github.io"],
@@ -26,7 +27,7 @@ app.get("/", (req, res) => {
   res.send("Backend is live!");
 });
 
-app.post("/", express.json(), async (req,res) => {
+app.post("/", async (req,res) => {
     const { newMessage } = req.body;
 
     client.chat.completions
