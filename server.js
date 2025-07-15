@@ -3,7 +3,9 @@ import cors from "cors";
 import express from "express";
 
 // Initial app setup
-const client = new OpenAI();
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 const app = express();
 const corsOptions = {
     origin: ["http://localhost:5173"],
@@ -39,7 +41,7 @@ app.post("/", express.json(), async (req,res) => {
 
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server started on port 3000");
 });
 
