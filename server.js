@@ -9,7 +9,7 @@ const openai = new OpenAI({
 const app = express();
 // Defines which frontend origins can access the server
 const corsOptions = {
-    origin: ["https://duranjulio2004.github.io/Portfolio/"],
+    origin: ["https://duranjulio2004.github.io"],
 };
 
 app.use(cors(corsOptions))
