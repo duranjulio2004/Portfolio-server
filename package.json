@@ -1,6 +1,5 @@
 {
   "name": "server",
-  "homepage": "https://duranjulio2004.github.io/Portfolio/",
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
