@@ -22,6 +22,10 @@ app.use(cors(corsOptions))
 //     res.json((message));
 // });
 
+app.get("/", (req, res) => {
+  res.send("Backend is live!");
+});
+
 app.post("/", express.json(), async (req,res) => {
     const { newMessage } = req.body;
 
