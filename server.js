@@ -10,6 +10,7 @@ const app = express();
 // Defines which frontend origins can access the server
 const corsOptions = {
     origin: ["https://duranjulio2004.github.io"],
+    methods: ["GET", "POST", "OPTIONS"],
 };
 
 app.use(cors(corsOptions))
